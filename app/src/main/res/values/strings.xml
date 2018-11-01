@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Txungamoyo</string>
+    <string name="welcome">Bem Vindo ao TxungamoyoApp</string>
+    <string name="home">Home</string>
+    <string name="item">Item</string>
+    <string name="buscar">Busque qualquer coisa</string>
+
+    <string name="btHome">Home</string>
+    <string name="backHome">Volte a Loja</string>
+
+    <string name="btMinhaConta">Conta</string>
+    <string name="btCarrinho">Carrinho</string>
+
+    <string name="btnConta">Conta</string>
+    <string name="Carrinho">Carrinho</string>
+    <string name="Submit">Submeter</string>
+    <string name="Entrar">Entrar</string>
+    <string name="SignIn">Sign In</string>
+    <string name="Cadastro">Cadastrar</string>
+    <string name="News">Store List</string>
+
+    <string name="Features">Productos Em Promoção</string>
+    <string name="vazio">O Seu Carinho Esta Vazio</string>
+    <string name="Latest">Latest Products</string>
+    <string name="Best">Best Selling Products</string>
+    <string name="Top">Top Rated Products</string>
+</resources>
