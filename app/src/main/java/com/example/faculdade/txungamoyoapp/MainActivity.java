@@ -1,5 +1,6 @@
 package com.example.faculdade.txungamoyoapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +9,22 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+
+    String url = "http://www.thejavaprogrammer.com/wp-json/wp/v2/posts?filter[posts_per_page]=10&fields=id,title";
+    List<Object> list;
+    ProgressDialog progressDialog;
+    ListView postList;
+    Map<String,Object> mapPost;
+    Map<String,Object> mapTitle;
+    int postID;
+    String postTitle[];
 
     private static final String TAG = "MainActivity";
 
