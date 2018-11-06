@@ -5,27 +5,6 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical" >
-    
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/buscar"/>
-
-
-    </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,6 +37,28 @@
 
 
     </LinearLayout>
+    
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/buscar"/>
+
+
+    </LinearLayout>
+
+
+
 
 
     <LinearLayout

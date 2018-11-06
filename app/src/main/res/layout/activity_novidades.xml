@@ -10,40 +10,11 @@
     tools:context=".MainActivity"
     >
 
-    <LinearLayout
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/btHome"
-            android:id="@+id/btnHome"
-            android:layout_weight="1"
-            android:onClick="Home"
-            />
-        <Button
-            android:id="@+id/btnConta"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/btMinhaConta"
-            android:layout_weight="1"
-            android:onClick="Conta"
-            />
-
-        <Button
-            android:id="@+id/btnCarrinho"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Carrinho"
-            android:onClick="Carrinho"/>
-
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        />
 
 
     <LinearLayout

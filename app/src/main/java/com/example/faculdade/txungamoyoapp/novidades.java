@@ -2,11 +2,13 @@ package com.example.faculdade.txungamoyoapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
 public class novidades extends AppCompatActivity {
+    private WebView webView;
 
     ViewFlipper v_flipper;
 /*
@@ -31,19 +33,21 @@ public class novidades extends AppCompatActivity {
         setContentView(R.layout.activity_novidades);
 
 
-        v_flipper = findViewById(R.id.v_flipper);
-        int images[] = {R.drawable.bg1, R.drawable.bg2, R.drawable.bg3};
+        webView = (WebView) findViewById(R.id.webView);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.txungamoyo.com/categoria-produto/uncategorized/");
 
-        //for loop
 
-       /* for(int i = 0; i < images.length; i++){
-            flipperImages(images[i]);
-        }*/
 
-       for (int image: images){
-           flipperImages(image);
-       }
+    }
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()){
+            webView.goBack();
 
+        } else {
+            super.onBackPressed();
+        }
     }
 
 
@@ -61,22 +65,6 @@ public void flipperImages(int image) {
     v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
 
 
-}
-
-
-    public void Carrinho (View View){
-
-        setContentView(R.layout.activity_carrinho);
-    }
-
-    public void Conta (View View){
-
-        setContentView(R.layout.activity_conta);
-    }
-
-    public void Home (View View){
-
-        setContentView(R.layout.activity_main);
     }
 
 }
