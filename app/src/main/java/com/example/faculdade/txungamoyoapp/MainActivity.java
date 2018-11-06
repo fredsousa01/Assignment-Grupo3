@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -16,6 +18,8 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+
+    private WebView webView;
 
     String url = "http://www.thejavaprogrammer.com/wp-json/wp/v2/posts?filter[posts_per_page]=10&fields=id,title";
     List<Object> list;
@@ -37,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        webView = (WebView) findViewById(R.id.webView);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.txungamoyo.com/");
+
+
         ((Button) findViewById(R.id.btnConta))
                 .setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
@@ -48,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
         getItems();
     }
 
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()){
+            webView.goBack();
+
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     private void getItems(){
         Log. d ( TAG , " initGetItems: Buscando Itens. " );
@@ -103,5 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_carrinho);
     }
+
 
 }
